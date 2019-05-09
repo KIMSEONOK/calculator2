@@ -1,0 +1,11 @@
+version: "3"
+services:
+    calculator:
+        image: localhost:5000/juht/calculator:latest
+        ports:
+              - 8090
+    redies:
+        image: redis:latest
+
+
+
