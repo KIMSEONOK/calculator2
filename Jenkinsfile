@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage ('checkout'){
             steps {
-                git url: 'https://github.com/juht/calculator2.git'
+                git url: 'https://github.com/KIMSEONOK/calculator22.git'
             }
         }
         stage ('Compile'){
@@ -47,12 +47,12 @@ pipeline {
         }
         stage ("Docker build") {
             steps {
-                sh "docker build -t localhost:5000/juht/calculator ."
+                sh "docker build -t localhost:5000/KIMSEONOK/calculator2 ."
             }
         }
         stage ("Docker push"){
             steps {
-                sh "docker push localhost:5000/juht/calculator"
+                sh "docker push localhost:5000/KIMSEONOK/calculator2"
             }
         }
         stage ("Deploy to staging"){
